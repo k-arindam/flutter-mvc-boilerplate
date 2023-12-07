@@ -24,16 +24,30 @@ class BoilerplateApp extends StatefulWidget {
 
   @override
   State<BoilerplateApp> createState() => _BoilerplateAppState();
+
+  static void restartApp(BuildContext context) =>
+      context.findAncestorStateOfType<_BoilerplateAppState>()?.restart();
 }
 
 class _BoilerplateAppState extends State<BoilerplateApp> {
+  Key _sessionKey = UniqueKey();
+
+  void restart() {
+    setState(() {
+      _sessionKey = UniqueKey();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialBinding: AppBindings(),
-      initialRoute: AppRoutes.home,
-      onGenerateRoute: AppRoutes.generateRoute,
+    return KeyedSubtree(
+      key: _sessionKey,
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialBinding: AppBindings(),
+        initialRoute: AppRoutes.home,
+        onGenerateRoute: AppRoutes.generateRoute,
+      ),
     );
   }
 }
