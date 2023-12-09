@@ -1,16 +1,29 @@
-# boilerplate
+# Flutter MVC Boilerplate
 
-MVC Boilerplate for Flutter
+A well-organized Flutter project template using the Model-View-Controller (MVC) architecture for clean and maintainable code.
+
+![Flutter MVC Boilerplate](https://storage.googleapis.com/cms-storage-bucket/6e19fee6b47b36ca613f.png)
+
+## Features
+
+- **MVC Architecture:** Organize your code into separate Model, View, and Controller layers for better maintainability and scalability.
+- **Clean Project Structure:** Follows best practices to keep your project organized and easy to navigate.
+- **Responsive UI:** Built with responsive design principles for a consistent user experience across different screen sizes.
+- **State Management:** Utilizes Flutter's built-in state management features for efficient and reactive UI updates.
+- **Dependency Injection:** Incorporates dependency injection for decoupled and testable code.
+- **Theming:** Easily customizable theme to match your app's branding.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/k-arindam/flutter-mvc-boilerplate.git
+2. **Navigate to the Project Directory:**
+    ```bash
+    cd flutter-mvc-boilerplate
+3. **Install Dependencies:**
+    ```bash
+    flutter pub get
+2. **Run the App:**
+    ```bash
+    flutter run
